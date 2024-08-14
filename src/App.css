@@ -1,0 +1,9 @@
+*{
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}

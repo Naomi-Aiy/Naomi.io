@@ -1,0 +1,101 @@
+.skills {
+    position: relative; /* Ensure positioning context for child elements */
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #181240 -4%, #F2BB78 132.9%);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skills-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/Stars Skills.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1; /* Behind all content but in front of the gradient */
+}
+
+.Group-Of-Cards {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    z-index: 2; /* Above skills-image */
+    position: relative; /* Ensure stacking context */
+}
+
+.Card {
+    border-color: #FFF;
+    border-width: 2px;
+    border-style: solid; 
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 30px;
+    width: 70%;
+    margin: 0px;
+}
+
+.skills h2 {
+    color: #FFF;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 20px;
+    margin: 0px;
+    z-index: 2; /* Above skills-image */
+    position: relative; /* Ensure stacking context */
+}
+
+.skills p {
+    color: #181240;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 22px; 
+    font-style: normal;
+    line-height: normal;
+    padding-bottom: 5px;
+    margin: 0px;
+    z-index: 2; /* Above skills-image */
+    position: relative; /* Ensure stacking context */
+}
+
+.skills h1 {
+    color: #181240;
+    font-family: "Quagera", sans-serif; 
+    font-size: 38px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0px;
+    padding-bottom: 10px;
+    z-index: 2; /* Above skills-image */
+    position: relative; /* Ensure stacking context */
+}
+
+.skills ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.skills li img {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+}

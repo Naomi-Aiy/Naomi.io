@@ -1,0 +1,162 @@
+/* Existing styles for larger screens remain unchanged */
+
+.about {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #181240 -4%, #F2BB78 132.9%);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure stacking context for z-index */
+    z-index: 2; /* Set to a lower value than hero section */
+    overflow: hidden;
+}
+
+.about-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/Stars About.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1; /* Behind about-box content */
+}
+
+.about-box {
+    position: relative; 
+    border: 4px solid white;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-left: 150px;
+    margin-right: 100px;
+    z-index: 2; /* Above about-image */
+}
+
+.about-box2 {
+    position: relative;
+    border: 4px solid white;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    padding-right: 10px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    margin-left: 40px;
+    z-index: 3; /* Above about-box */
+}
+
+.circle {
+    position: absolute;
+    border: 4px dashed white;
+    border-radius: 100%;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 25%; 
+    transform: translate(-50%, -50%); 
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.0) translateX(0%);
+    transition: transform 0.3s ease;
+}
+
+.about-text {
+    text-align: left;
+    max-width: 500px;
+    margin-left: 500px;
+}
+
+.about-text h1 {
+    color: #FFF;
+    font-family: "Libre Caslon Text";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.about-text p {
+    color: #FFF;
+    font-family: "Red Hat Display";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+/* Media query for screen sizes less than 1150px */
+@media (max-width: 1150px) {
+    .about-box,
+    .about-box2 {
+        border-radius: 0;
+        padding: 20px;
+        margin: 20px 20px;
+    }
+
+    .circle {
+        position: static;
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        border-radius: 100%;
+        transform: none;
+    }
+
+    .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .about-box,
+    .about-box2 {
+        border-radius: 0;
+        padding: 20px;
+        margin: 20px 20px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
